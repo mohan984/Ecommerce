@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Headphones | E-Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Premium wireless headphones with noise cancellation and studio-quality sound">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">E-Shop</a></h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main>
+        <!-- Hero section for home page -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Premium Audio Experience</h1>
+                    <p>Discover our collection of high-quality headphones and audio accessories</p>
+                    <a href="#featured-products" class="cta-button">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="featured-products" id="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="SoundWave Pro X7 Headphones">
+                        </div>
+                        <div class="product-details">
+                            <h3>SoundWave Pro X7</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="review-count">128 Reviews</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$299.99</span>
+                                <span class="original-price">$399.99</span>
+                            </div>
+                            <a href="#" class="view-product-btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge sale">Sale</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1577174881658-0f30ed549adc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Elite Buds Pro">
+                        </div>
+                        <div class="product-details">
+                            <h3>Elite Buds Pro</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="review-count">94 Reviews</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$149.99</span>
+                                <span class="original-price">$199.99</span>
+                            </div>
+                            <a href="#" class="view-product-btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="BassPulse Wireless Speaker">
+                        </div>
+                        <div class="product-details">
+                            <h3>BassPulse Wireless Speaker</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="review-count">156 Reviews</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$179.99</span>
+                            </div>
+                            <a href="#" class="view-product-btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">Best Seller</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="AcousticFlow Studio">
+                        </div>
+                        <div class="product-details">
+                            <h3>AcousticFlow Studio</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="review-count">212 Reviews</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$249.99</span>
+                                <span class="original-price">$299.99</span>
+                            </div>
+                            <a href="#" class="view-product-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Free Shipping</h3>
+                        <p>Free shipping on all orders over $50</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <h3>30-Day Returns</h3>
+                        <p>No questions asked return policy</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>2-Year Warranty</h3>
+                        <p>All products come with a 2-year warranty</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Our team is always ready to help</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breadcrumb navigation (for product page) -->
+        <div class="breadcrumb container product-page-only" style="display: none;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Audio</a></li>
+                <li><a href="#">Headphones</a></li>
+                <li>SoundWave Pro X7</li>
+            </ul>
+        </div>
+
+        <!-- Product section -->
+        <section class="product-section container" style="display: none;">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="SoundWave Pro X7 Headphones" id="main-product-image">
+                </div>
+                <div class="thumbnail-container">
+                    <div class="thumbnail active" data-img="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="SoundWave Pro X7 - Front view">
+                    </div>
+                    <div class="thumbnail" data-img="https://images.unsplash.com/photo-1577174881658-0f30ed549adc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+                        <img src="https://images.unsplash.com/photo-1577174881658-0f30ed549adc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="SoundWave Pro X7 - Side view">
+                    </div>
+                    <div class="thumbnail" data-img="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="SoundWave Pro X7 - Detail view">
+                    </div>
+                </div>
+            </div>
+            <div class="product-info">
+                <h1 class="product-title">SoundWave Pro X7</h1>
+                <div class="product-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="review-count">128 Reviews</span>
+                </div>
+                <div class="product-price">
+                    <span class="current-price">$299.99</span>
+                    <span class="original-price">$399.99</span>
+                    <span class="discount">25% OFF</span>
+                </div>
+                <div class="product-description">
+                    <p>Experience audio like never before with the SoundWave Pro X7 wireless headphones. Featuring active noise cancellation, high-fidelity sound, and premium build quality, these headphones deliver an immersive listening experience for music enthusiasts and professionals alike.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> 40-hour battery life</li>
+                        <li><i class="fas fa-check"></i> Active noise cancellation</li>
+                        <li><i class="fas fa-check"></i> Bluetooth 5.2 connectivity</li>
+                        <li><i class="fas fa-check"></i> High-resolution audio certified</li>
+                        <li><i class="fas fa-check"></i> Foldable design with premium travel case</li>
+                    </ul>
+                </div>
+                <div class="product-variants">
+                    <h3>Color</h3>
+                    <div class="color-options">
+                        <button class="color-option active" data-color="black" style="background-color: #222;"></button>
+                        <button class="color-option" data-color="silver" style="background-color: #C0C0C0;"></button>
+                        <button class="color-option" data-color="blue" style="background-color: #1E90FF;"></button>
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
+                        <input type="number" value="1" min="1" max="10" class="quantity-input">
+                        <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="shipping-info">
+                    <p><i class="fas fa-truck"></i> Free shipping on orders over $50</p>
+                    <p><i class="fas fa-undo"></i> 30-day money-back guarantee</p>
+                    <p><i class="fas fa-shield-alt"></i> 2-year warranty included</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product tabs section -->
+        <section class="product-tabs container" style="display: none;">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="specifications">Specifications</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+            </div>
+            <div class="tabs-content">
+                <div class="tab-panel active" id="description">
+                    <h2>Product Description</h2>
+                    <p>SoundWave Pro X7 headphones represent the pinnacle of audio engineering, designed for audiophiles and music professionals who demand exceptional sound quality and comfort.</p>
+                    <p>The Pro X7 features custom-tuned 40mm dynamic drivers that deliver rich, detailed sound across the entire frequency spectrum. The advanced active noise cancellation technology uses four microphones to continuously monitor and adapt to your environment, effectively blocking out unwanted noise.</p>
+                    <p>Built with premium materials including memory foam ear cushions and a lightweight, adjustable headband, the Pro X7 ensures hours of comfortable listening. The foldable design and included premium travel case make these headphones the perfect companion for travelers and commuters.</p>
+                    <p>With Bluetooth 5.2 technology, the Pro X7 provides a stable wireless connection with a range of up to 10 meters. For ultimate sound quality, you can also use the included audio cable for a wired connection. The built-in high-capacity battery delivers up to 40 hours of playback time, and fast charging gives you 5 hours of playback with just 10 minutes of charging.</p>
+                </div>
+                <div class="tab-panel" id="specifications">
+                    <h2>Technical Specifications</h2>
+                    <div class="specs-table">
+                        <div class="specs-row">
+                            <div class="specs-cell header">Driver Size</div>
+                            <div class="specs-cell">40mm Dynamic Drivers</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-cell header">Frequency Response</div>
+                            <div class="specs-cell">4Hz - 40kHz</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-cell header">Impedance</div>
+                            <div class="specs-cell">32 Ohms</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-cell header">Sensitivity</div>
+                            <div class="specs-cell">105dB/mW</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-cell header">Bluetooth Version</div>
+                            <div class="specs-cell">5.2</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-cell header">Bluetooth Range</div>
+                            <div class="specs-cell">10m (33ft)</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-cell header">Battery Life</div>
+                            <div class="specs-cell">Up to 40 hours (ANC off), 30 hours (ANC on)</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-cell header">Charging Time</div>
+                            <div class="specs-cell">2 hours (full charge)</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-cell header">Weight</div>
+                            <div class="specs-cell">310g</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-cell header">In the Box</div>
+                            <div class="specs-cell">SoundWave Pro X7 Headphones, Premium Travel Case, USB-C Charging Cable, 3.5mm Audio Cable, User Manual</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="reviews">
+                    <h2>Customer Reviews</h2>
+                    <div class="reviews-summary">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.5</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Based on 128 reviews</p>
+                        </div>
+                        <div class="rating-breakdown">
+                            <div class="rating-bar">
+                                <span class="rating-level">5 stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 65%"></div>
+                                </div>
+                                <span class="rating-percent">65%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-level">4 stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 25%"></div>
+                                </div>
+                                <span class="rating-percent">25%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-level">3 stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 7%"></div>
+                                </div>
+                                <span class="rating-percent">7%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-level">2 stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 2%"></div>
+                                </div>
+                                <span class="rating-percent">2%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-level">1 star</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 1%"></div>
+                                </div>
+                                <span class="rating-percent">1%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-list">
+                        <div class="review-item">
+                            <div class="reviewer-info">
+                                <h4>Sarah Johnson</h4>
+                                <div class="review-date">June 12, 2023</div>
+                            </div>
+                            <div class="review-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <h5>Outstanding quality and comfort!</h5>
+                                <p>I've been using these headphones for about a month now, and I'm extremely impressed with the sound quality and noise cancellation. The battery life is fantastic - I only need to charge them once a week with daily use. They're also very comfortable for long listening sessions. Highly recommended!</p>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="reviewer-info">
+                                <h4>Michael Rodriguez</h4>
+                                <div class="review-date">May 28, 2023</div>
+                            </div>
+                            <div class="review-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <h5>Great sound, but app needs work</h5>
+                                <p>The sound quality is excellent and the noise cancellation works very well. The headphones are comfortable and the battery life is impressive. My only complaint is that the companion app is a bit buggy and could use some improvements. Overall, I'm happy with my purchase.</p>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="reviewer-info">
+                                <h4>Emily Chen</h4>
+                                <div class="review-date">May 15, 2023</div>
+                            </div>
+                            <div class="review-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <h5>Perfect for travel</h5>
+                                <p>I bought these headphones primarily for travel and they have exceeded my expectations. The noise cancellation is perfect for airplanes, and the sound quality is fantastic. They're comfortable enough to wear for an entire long-haul flight. The included travel case is sturdy and well-designed. Very satisfied with this purchase!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="load-more-btn">Load More Reviews</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related products section -->
+        <section class="related-products container">
+            <h2 class="section-title">You May Also Like</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="SoundWave Air Pods">
+                    </div>
+                    <div class="product-details">
+                        <h3>SoundWave Air Pods</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="review-count">(96)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$149.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="SoundWave Bass Boost Speaker">
+                    </div>
+                    <div class="product-details">
+                        <h3>SoundWave Bass Boost Speaker</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(112)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$199.99</span>
+                            <span class="original-price">$249.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600086827875-a63b01f1335c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="SoundWave Studio Monitor Headphones">
+                    </div>
+                    <div class="product-details">
+                        <h3>SoundWave Studio Monitor Headphones</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="review-count">(78)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$349.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="SoundWave Sports Earbuds">
+                    </div>
+                    <div class="product-details">
+                        <h3>SoundWave Sports Earbuds</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="review-count">(56)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$129.99</span>
+                            <span class="original-price">$159.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>E-Shop</h3>
+                    <p>Quality audio products for music enthusiasts and professionals.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Headphones</a></li>
+                        <li><a href="#">Earbuds</a></li>
+                        <li><a href="#">Speakers</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Repair Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 E-Shop. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick view modal -->
+    <div class="modal-overlay" id="quickViewModal">
+        <div class="modal">
+            <button class="close-modal" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <div class="quick-view-container">
+                    <div class="quick-view-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="SoundWave Pro X7 Headphones" id="modal-product-image">
+                    </div>
+                    <div class="quick-view-details">
+                        <h2>SoundWave Pro X7</h2>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">128 Reviews</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$299.99</span>
+                            <span class="original-price">$399.99</span>
+                            <span class="discount">25% OFF</span>
+                        </div>
+                        <p class="quick-description">Experience premium audio quality with the SoundWave Pro X7 wireless headphones featuring active noise cancellation, 40-hour battery life, and premium comfort for extended listening sessions.</p>
+                        <button class="view-details-btn">View Full Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

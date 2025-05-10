@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | E-Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Browse our collection of premium audio products including headphones, earbuds, and speakers">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">E-Shop</a></h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Shop All Products</h1>
+                <p>Browse our collection of premium audio products</p>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section class="shop-section">
+            <div class="container">
+                <div class="shop-container">
+                    <!-- Sidebar/Filters -->
+                    <div class="shop-sidebar">
+                        <div class="filter-group">
+                            <h3>Categories</h3>
+                            <ul class="filter-list">
+                                <li>
+                                    <input type="checkbox" id="cat-headphones" checked>
+                                    <label for="cat-headphones">Headphones</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="cat-earbuds">
+                                    <label for="cat-earbuds">Earbuds</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="cat-speakers">
+                                    <label for="cat-speakers">Speakers</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="cat-accessories">
+                                    <label for="cat-accessories">Accessories</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="filter-group">
+                            <h3>Price Range</h3>
+                            <div class="price-slider">
+                                <input type="range" id="price-range" min="0" max="500" step="10" value="350">
+                                <div class="price-values">
+                                    <span>$0</span>
+                                    <span id="current-max-price">$350</span>
+                                    <span>$500</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h3>Features</h3>
+                            <ul class="filter-list">
+                                <li>
+                                    <input type="checkbox" id="feature-wireless">
+                                    <label for="feature-wireless">Wireless</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="feature-anc">
+                                    <label for="feature-anc">Noise Cancellation</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="feature-waterproof">
+                                    <label for="feature-waterproof">Waterproof</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="feature-microphone">
+                                    <label for="feature-microphone">Built-in Microphone</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="filter-group">
+                            <h3>Brand</h3>
+                            <ul class="filter-list">
+                                <li>
+                                    <input type="checkbox" id="brand-soundwave">
+                                    <label for="brand-soundwave">SoundWave</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="brand-acousticflow">
+                                    <label for="brand-acousticflow">AcousticFlow</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="brand-elite">
+                                    <label for="brand-elite">Elite</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="brand-basspulse">
+                                    <label for="brand-basspulse">BassPulse</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="apply-filters-btn">Apply Filters</button>
+                        <button class="reset-filters-btn">Reset Filters</button>
+                    </div>
+
+                    <!-- Product Grid -->
+                    <div class="shop-products">
+                        <div class="shop-header">
+                            <div class="results-count">
+                                <p>Showing <span>12</span> products</p>
+                            </div>
+                            <div class="sort-options">
+                                <label for="sort-by">Sort by:</label>
+                                <select id="sort-by">
+                                    <option value="featured">Featured</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="rating">Customer Rating</option>
+                                    <option value="newest">Newest</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="products-grid">
+                            <!-- Product 1 -->
+                            <div class="product-card">
+                                <div class="product-badge">New</div>
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="SoundWave Pro X7 Headphones">
+                                </div>
+                                <div class="product-details">
+                                    <h3>SoundWave Pro X7</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <span class="review-count">128 Reviews</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">$299.99</span>
+                                        <span class="original-price">$399.99</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <a href="#" class="view-product-btn">View Details</a>
+                                        <button class="quick-add-btn"><i class="fas fa-cart-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="product-card">
+                                <div class="product-badge sale">Sale</div>
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1577174881658-0f30ed549adc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Elite Buds Pro">
+                                </div>
+                                <div class="product-details">
+                                    <h3>Elite Buds Pro</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="review-count">94 Reviews</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">$149.99</span>
+                                        <span class="original-price">$199.99</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <a href="#" class="view-product-btn">View Details</a>
+                                        <button class="quick-add-btn"><i class="fas fa-cart-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="BassPulse Wireless Speaker">
+                                </div>
+                                <div class="product-details">
+                                    <h3>BassPulse Wireless Speaker</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="review-count">156 Reviews</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">$179.99</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <a href="#" class="view-product-btn">View Details</a>
+                                        <button class="quick-add-btn"><i class="fas fa-cart-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="product-card">
+                                <div class="product-badge">Best Seller</div>
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="AcousticFlow Studio">
+                                </div>
+                                <div class="product-details">
+                                    <h3>AcousticFlow Studio</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <span class="review-count">212 Reviews</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">$249.99</span>
+                                        <span class="original-price">$299.99</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <a href="#" class="view-product-btn">View Details</a>
+                                        <button class="quick-add-btn"><i class="fas fa-cart-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 5 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="SoundWave Mini">
+                                </div>
+                                <div class="product-details">
+                                    <h3>SoundWave Mini</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="review-count">87 Reviews</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">$199.99</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <a href="#" class="view-product-btn">View Details</a>
+                                        <button class="quick-add-btn"><i class="fas fa-cart-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 6 -->
+                            <div class="product-card">
+                                <div class="product-badge sale">Sale</div>
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1578319439584-104c94d37305?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="BassPulse Mini">
+                                </div>
+                                <div class="product-details">
+                                    <h3>BassPulse Mini</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="review-count">64 Reviews</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">$89.99</span>
+                                        <span class="original-price">$119.99</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <a href="#" class="view-product-btn">View Details</a>
+                                        <button class="quick-add-btn"><i class="fas fa-cart-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- More products can be added here -->
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <span class="pagination-ellipsis">...</span>
+                            <button class="pagination-btn">8</button>
+                            <button class="pagination-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>E-Shop</h3>
+                    <p>Quality audio products for music enthusiasts and professionals.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Headphones</a></li>
+                        <li><a href="#">Earbuds</a></li>
+                        <li><a href="#">Speakers</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Repair Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 E-Shop. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
